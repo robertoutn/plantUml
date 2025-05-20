@@ -1,0 +1,134 @@
+<mxfile host="65bd71144e">
+    <diagram name="Secuencia - Agregar Segmento y Calcular Altitud" id="0">
+        <mxGraphModel dx="0" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="actor1" value="Controlador" style="umlActor;verticalLabelPosition=bottom;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="60" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline1" style="umlLifeline" parent="1" vertex="1">
+                    <mxGeometry x="60" y="140" width="8" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="part1" value="Vuelo" style="swimlane;horizontal=0;startSize=20;fillColor=#dae8fc;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="60" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline2" style="umlLifeline" parent="1" vertex="1">
+                    <mxGeometry x="220" y="140" width="8" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="part2" value="SegmentoRuta" style="swimlane;horizontal=0;startSize=20;fillColor=#fff2cc;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="60" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline3" style="umlLifeline" parent="1" vertex="1">
+                    <mxGeometry x="410" y="140" width="8" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="msg1" value="agregarSegmento(codigo, altitud)" style="endArrow=blockThin;html=1;" parent="1" source="actor1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg2" value="new SegmentoRuta(codigo, altitud)" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg3" value="segmentos.add(S)" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg4" value="calcularAltitudPromedio()" style="endArrow=blockThin;html=1;" parent="1" source="actor1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg5" value="getAltitud()" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg6" value="getAltitud()" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg7" value="calcular promedio" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg8" value="altitud promedio" style="endArrow=blockThin;html=1;" parent="1" source="part1" target="actor1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Secuencia - Agregar Segmento y Calcular Altitud" id="1rSedkXdZ1xdA_3o7UUk">
+        <mxGraphModel dx="797" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="actor1" value="Controlador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="60" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline1" style="dashed=1;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="140" width="2" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="part1" value="Vuelo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="60" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline2" style="dashed=1;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="100" width="2" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="part2" value="SegmentoRuta" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lifeline3" style="dashed=1;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="100" width="2" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="msg1" value="agregarSegmento(codigo, altitud)" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="actor1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg2" value="new SegmentoRuta(codigo, altitud)" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg3" value="segmentos.add(S)" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg4" value="calcularAltitudPromedio()" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="actor1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg5" value="getAltitud()" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg6" value="getAltitud()" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="part2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg7" value="calcular promedio" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="part1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="msg8" value="altitud promedio" style="endArrow=blockThin;html=1;fontSize=14;" parent="1" source="part1" target="actor1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="180" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

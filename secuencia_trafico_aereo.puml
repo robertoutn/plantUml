@@ -1,0 +1,36 @@
+@startuml secuencia_trafico_aereo
+' Diagrama de Secuencia - Patrón Creador + Patrón Experto
+' Sistema de Control de Tránsito Aéreo (UML 2.0)
+
+title Diagrama de Secuencia - Patrón Creador + Patrón Experto\nSistema de Control de Tránsito Aéreo
+
+actor Controlador
+participant Vuelo as V
+participant SegmentoRuta as S
+
+' --- Fase: Creador ---
+Controlador -> V : agregarSegmento("SBA-BUE", 31000)
+activate V
+V -> S : «create» SegmentoRuta("SBA-BUE", 31000)
+create S
+activate S
+V -> S : inicializar()
+S --> V : ok
+V -> V : segmentos.add(S)
+deactivate S
+deactivate V
+
+' --- Fase: Experto ---
+Controlador -> V : calcularAltitudPromedio()
+activate V
+V -> S : getAltitud()
+activate S
+S --> V : altitud
+V -> S : getAltitud()
+S --> V : altitud
+deactivate S
+V -> V : calcularPromedio()
+V --> Controlador : altitudPromedio
+deactivate V
+
+@enduml

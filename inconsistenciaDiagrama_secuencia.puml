@@ -1,0 +1,13 @@
+@startuml
+actor Controlador_de_tránsito_aéreo
+participant "Vuelo" as V
+participant "SsrCode" as S
+
+Controlador_de_tránsito_aéreo -> V : solicitarSsr()
+V -> S : generarNuevoCodigo()
+S -> V : setCodigo()
+
+note right of S: INCONSISTENCIA 1:\nEl método 'generarNuevoCodigo()' no está en el\nDiagrama de Clases de 'SsrCode'
+
+note right of V: INCONSISTENCIA 2:\nEl método 'setCodigo()' tampoco existe\nsegún el Diagrama de Clases
+@enduml

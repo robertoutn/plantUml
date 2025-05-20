@@ -1,0 +1,27 @@
+@startuml inconsistenciaDiagClase
+actor "Controlador de tránsito aéreo" as CTA
+
+class Controlador {
+  +gestionarSsrCode()
+}
+
+class Vuelo {
+  -estado : Estado
+  +getEstado()
+}
+
+class SsrCode {
+  -codigo : String
+  +validar()
+  +asignar()
+  +notificarCambioEstado()
+}
+
+class Estado {
+  -nombre : String
+}
+
+Controlador --> SsrCode : gestiona
+SsrCode --> Vuelo : notifica cambio
+Vuelo --> Estado : tiene
+@enduml

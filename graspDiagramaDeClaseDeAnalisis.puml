@@ -1,0 +1,30 @@
+@startuml grasp_diagrama
+title Diagrama de Clases - Patrones GRASP en Tránsito Aéreo
+
+class PantallaControlVuelos {
+  + registrarAterrizaje(vuelo: Vuelo, pista: Pista)
+}
+
+class GestorAterrizaje {
+  + registrarAterrizaje(vuelo: Vuelo, pista: Pista)
+}
+
+class Vuelo {
+  - estado: EstadoVuelo
+  - eventos: List<String>
+  + marcarComoAterrizado()
+  + registrarEvento(evento: String)
+}
+
+class Pista {
+  - estado: EstadoPista
+  + estaDisponible(): Boolean
+  + ocupar()
+  + liberar()
+}
+
+PantallaControlVuelos --> GestorAterrizaje : coordina
+GestorAterrizaje --> Vuelo : actualiza estado
+GestorAterrizaje --> Pista : ocupa pista
+
+@enduml

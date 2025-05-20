@@ -1,0 +1,18 @@
+@startuml patrones_trafico_aereo
+ title Patrones Experto y Creador - Sistema de Control de Tránsito Aéreo
+
+ class Vuelo {
+   - segmentos: List<SegmentoRuta>
+   + agregarSegmento(codigo: String, altitud: int): void
+   + calcularAltitudPromedio(): double
+ }
+
+ class SegmentoRuta {
+   - codigo: String
+   - altitud: int
+   + getAltitud(): int
+ }
+
+ Vuelo "1" --> "0..*" SegmentoRuta
+
+@enduml

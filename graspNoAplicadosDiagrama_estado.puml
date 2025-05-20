@@ -1,0 +1,6 @@
+@startuml DiagramaEstadoSsrCode
+[*] --> NoAsignado
+NoAsignado --> Asignado : asignar()
+Asignado --> NoAsignado : liberar()
+Asignado --> Asignado : notificarCambioEstado()
+@enduml

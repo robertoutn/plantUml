@@ -1,0 +1,16 @@
+@startuml grasp_diagrama_de_secuencia
+title Diagrama de Secuencia - Registro de Aterrizaje (Tránsito Aéreo)
+
+actor ControladorHumano
+participant PantallaControlVuelos
+participant GestorAterrizaje
+participant Pista
+participant Vuelo
+
+ControladorHumano -> PantallaControlVuelos : registrarAterrizaje(vuelo, pista)
+PantallaControlVuelos -> GestorAterrizaje : registrarAterrizaje(vuelo, pista)
+GestorAterrizaje -> Pista : ocupar()
+GestorAterrizaje -> Vuelo : marcarComoAterrizado()
+GestorAterrizaje -> Vuelo : registrarEvento("Aterrizaje registrado")
+
+@enduml

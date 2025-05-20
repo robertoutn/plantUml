@@ -1,0 +1,13 @@
+@startuml DiagramaSecuencia
+actor "Controlador de tránsito aéreo" as CTA
+participant Controlador
+participant SsrCode
+participant Vuelo
+participant Estado
+
+CTA -> Controlador : gestionarSsrCode()
+Controlador -> SsrCode : asignar()
+SsrCode -> Vuelo : notificarCambioEstado()
+Vuelo -> Estado : getNombre()
+
+@enduml

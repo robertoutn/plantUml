@@ -1,0 +1,8 @@
+@startuml graspNoAplicadosDiagrama_estado
+[*] --> Asignado
+Asignado --> Liberado : liberar()
+Liberado --> Asignado : asignar()
+
+note right of Asignado : INCONSISTENCIA 3:\nNo hay transición desde un estado inicial al estado 'Solicitado'\nque sí existe en la lógica de negocio
+
+@enduml
