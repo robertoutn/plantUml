@@ -1,0 +1,12 @@
+@startuml EstadoSSR
+state "Disponible" as Disponible
+state "Asignado" as Asignado
+state "Liberado" as Liberado
+
+[*] --> Disponible
+
+Disponible --> Asignado : asignar()
+Asignado --> Liberado : liberar()
+Liberado --> Disponible : reactivar()
+
+@enduml

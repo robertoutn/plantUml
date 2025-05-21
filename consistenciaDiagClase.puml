@@ -1,0 +1,10 @@
+@startuml RealizacionCasoUsoSSR
+actor ControladorDeTransitoAereo
+boundary IU_SSR
+control GestionSSR
+entity SsrCode
+
+ControladorDeTransitoAereo -- IU_SSR
+IU_SSR -- GestionSSR
+GestionSSR -- SsrCode
+@enduml
